@@ -53,42 +53,39 @@ namespace HWChapTwo
         {
             //Problem #4
             int WordCount = 0;
-            try
+            try //This try catch makes sure that the program doesn't blow up if the file they gave doesn't exist or is null
             {
-                using (StreamReader streamReader = new StreamReader(FileName))
+                using (StreamReader streamReader = new StreamReader(FileName)) //I decided to use a StreamReader to accomplish this task as I think its a great tool.
                 {
-                    string line = streamReader.ReadLine();
-                    if (line.Contains(WordToBeCounted))
-                    {
-                        while (line != null | streamReader.EndOfStream == false)
-                        {
-                            string[] CharsNotAllowed = new string[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "_", "+",
-                            "`", "~", "[", "]", "{", "}", ";", "'", ":", ",", ".", "/", "<", ">", "?", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")"};
-                            for (int i = 0; i < CharsNotAllowed.Length; i++)
-                            {
-                                line.Replace(CharsNotAllowed[i], " ");
-                                WriteLine("YEEES YEEES");
-                            }
+                    string allLines = streamReader.ReadToEnd(); //This turns all the lines into one long string basically.
+                    string[] lines = allLines.Split(Environment.NewLine); //This splits all of those lines again by where the computer recognizes line splits.
 
-                            string[] lineArray = line.Split(" ");
-                            for (int i = 0; i < lineArray.Length; i++)
+                    foreach (string line in lines) //This runs for each line individually, covering the whole file.
+                    {
+                        string[] CharsNotAllowed = new string[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "_", "+", @"r", @"rn",
+                        "`", "~", "[", "]", "{", "}", ";", "'", ":", ",", ".", "/", "<", ">", "?", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")"};
+                        for (int i = 0; i < CharsNotAllowed.Length; i++) //This should replace all of the 'special characters' 
+                        {
+                            line.Replace(CharsNotAllowed[i], " ");
+                        }
+
+                        string[] wordsArray = line.Split(" "); //This splits the line into an array of individual words.
+                        for (int i = 0; i < wordsArray.Length; i++) 
+                        {
+                            if (wordsArray[i] == WordToBeCounted)
                             {
-                                WriteLine("YEEES YEEES YEEES");
-                                if (lineArray[i] == WordToBeCounted)
-                                {
-                                    WordCount++;
-                                }
+                                WordCount++;    //Every time the array member equals the WordToBeCounted, it adds one to WordCount.
                             }
                         }
                     }
                 }
             }
-            catch
+            catch //If something was wrong with the file it just tells the user "The file could not be read."
             {
-                WriteLine("The file could not be read:");
+                WriteLine("The file could not be read.");
             }
 
-            WriteLine($"The word {WordToBeCounted} appeared {WordCount} times in that text file. ");
+            WriteLine($"The word '{WordToBeCounted}' appeared '{WordCount}' times in that text file. "); //We let the user know how many times the word appeared.
         }
     }
 }
