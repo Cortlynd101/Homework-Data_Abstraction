@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Cortl\\code\\DataStruct\\HWChapTwo\\HWChapTwo.csproj",
+      "projectUniqueName": "c:\\Users\\Cortl\\code\\DataStruct\\HW\\HWChapTwo.csproj",
       "projectName": "HWChapTwo",
-      "projectPath": "C:\\Users\\Cortl\\code\\DataStruct\\HWChapTwo\\HWChapTwo.csproj",
+      "projectPath": "c:\\Users\\Cortl\\code\\DataStruct\\HW\\HWChapTwo.csproj",
       "packagesPath": "C:\\Users\\Cortl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Cortl\\code\\DataStruct\\HWChapTwo\\obj\\",
+      "outputPath": "c:\\Users\\Cortl\\code\\DataStruct\\HW\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Cortl\\AppData\\Roaming\\NuGet\\NuGet.Config",
