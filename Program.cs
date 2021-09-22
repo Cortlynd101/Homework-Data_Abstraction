@@ -11,7 +11,7 @@ namespace AllHW
         {
             // HomeWorkTwo.ProblemFour("TestFile.txt", "to"); //Problem #4
             // HomeWorkTwo.ProblemNinteen(); //Problem #19
-            
+
             // WriteLine($"The number is: {HomeWorkThree.ProblemFour(1, 4)}"); //Answer should be 10.
             // WriteLine($"The number is: {HomeWorkThree.ProblemFour(2, 4)}"); //Answer should be 9.
             // WriteLine($"The number is: {HomeWorkThree.ProblemFour(2, 6)}"); //Answer should be 20.
@@ -29,7 +29,15 @@ namespace AllHW
             // WriteLine($"The number is: {HomeWorkThree.power2(3, 32)}"); //Answer should be 1.853 * 10^15.
             // WriteLine($"The number is: {HomeWorkThree.power3(3, 32)}"); //Answer should be infinity.
 
-            List<string> StringList = new List<string>();
+            // List<string> StringList = new List<string>();
+
+            LinkedList<int> ListOne = new LinkedList<int>();
+            LinkedList<int> ListTwo = new LinkedList<int>();
+            LinkedList<int> ListThree = new LinkedList<int>();
+            HomeWorkFive.ListBuilder(ListOne, ListTwo, ListThree);
+
+            HomeWorkFive.ListCombiner_Decending(ListOne, ListTwo, ListThree);
+
         }
     }
 }
