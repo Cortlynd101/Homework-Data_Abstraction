@@ -34,10 +34,8 @@ namespace AllHW
             LinkedList<int> ListOne = new LinkedList<int>();
             LinkedList<int> ListTwo = new LinkedList<int>();
             LinkedList<int> ListThree = new LinkedList<int>();
-            HomeWorkFive.ListBuilder(ListOne, ListTwo, ListThree);
-
-            HomeWorkFive.ListCombiner_Decending(ListOne, ListTwo, ListThree);
-
+            HomeWorkFive.ProblemSeven.ListBuilder(ListOne, ListTwo, ListThree);
+            HomeWorkFive.ProblemSeven.ListCombiner_Decending(ListOne, ListTwo, ListThree);
         }
     }
 }
