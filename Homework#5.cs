@@ -9,7 +9,8 @@ namespace AllHW
     {
         public class ProblemSeven
         {
-            public static void ListBuilder(LinkedList<int> ListOne, LinkedList<int> ListTwo, LinkedList<int> ListThree) //This builds the lists that I use for problem #7
+            public static void ListBuilder(LinkedList<int> ListOne, LinkedList<int> ListTwo, LinkedList<int> ListThree) 
+            //This builds the lists that I use for problem #7
             {
                 //I am using the built in LinkedList<T> feature of c#.
                 ListOne.AddFirst(1);
@@ -21,8 +22,9 @@ namespace AllHW
                 ListTwo.AddAfter(ListTwo.First.Next, 9);
             }
 
-            public static void ListCombiner_Decending(LinkedList<int> ListOne, LinkedList<int> ListTwo, LinkedList<int> ListThree) //This is problem #7
-                                                                                                                                   //We take in three LinkedList<int>s and combine the first two in descending order. This assumes that ListOne is alreadu in decending order.
+            public static void ListCombiner_Decending(LinkedList<int> ListOne, LinkedList<int> ListTwo, LinkedList<int> ListThree) 
+            //This is problem #7
+            //We take in three LinkedList<int>s and combine the first two in descending order. This assumes that ListOne is alreadu in decending order.
             {
                 ListThree = ListOne; //First we make the first(assuming the first is already in descending order) and third list the same thing.
                 LinkedListNode<int> ListTwoCurrent = ListTwo.First;
