@@ -36,6 +36,15 @@ namespace AllHW
             LinkedList<int> ListThree = new LinkedList<int>();
             HomeWorkFive.ProblemSeven.ListBuilder(ListOne, ListTwo, ListThree);
             HomeWorkFive.ProblemSeven.ListCombiner_Decending(ListOne, ListTwo, ListThree);
+            
+            
+            Console.WriteLine("Please enter string of numbers to be converted! ");
+            string line = Console.ReadLine();
+            char[] lineChar = new char[80];
+            foreach(char c in line)
+            {
+                
+            }
         }
     }
 }
